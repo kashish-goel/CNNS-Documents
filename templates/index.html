@@ -1,0 +1,72 @@
+{% load static %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link rel="stylesheet" href="{%static 'styles/default.css' %}">
+		<script src="{%static 'javascript/function.js' %}"></script>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+    <body>
+	
+		<!-- <img src="{%static 'images/pic1.jpg' %}"   width="160px" height="95px"/>
+		<img src="{%static 'images/pic2.jpg' %}" style="float: right;" width="160px" height="95px"/>
+		 -->
+		<div class="Topheader">
+			<i class="material-icons" style="font-size:35px;color:white;text-shadow:2px 2px 4px #000000;">home</i>
+		</div> 
+		<div>
+			<div class="sidebar" id="mySidenav">
+				<ul>
+					<li><a href="report">CNNS REPORT</a></li>
+					<li><div><a href="dataUsersWorkshop">CNNS DATA USERS WORKSHOP</a></div></li>
+					<li><a href="keyFindings">CNNS KEY FINDINGS</a></li>
+					<li><div><a href="factsheets" >CNNS FACTSHEETS</a></div></li>
+					<li><a href="presentations">CNNS PRESENTATIONS</a></li>
+					<li><div><a href="thematicReport">CNNS THEMATIC REPORT</a></div></li>
+					<li><a href="articles">CNNS ARTICLES</a></li>
+					<li><div><a href="stateAndDistrict">STATE AND DISTRICT NUTRITION FACTSHEETS</a></div></li>
+				</ul>			
+			</div>
+			<div class="row">
+				<!-- <div class="column left">
+					<div class="header">
+						<div id="menu">
+							<ul>
+								<li><a href="report">CNNS REPORT</a></li>
+								<li><div><a href="dataUsersWorkshop" >CNNS DATA USERS WORKSHOP</a></div></li>
+								<li><a href="keyFindings" >CNNS KEY FINDINGS</a></li>
+								<li><div><a href="factsheets" >CNNS FACTSHEETS</a></div></li>
+								<li><a href="presentations" >CNNS PRESENTATIONS</a></li>
+								<li><div><a href="thematicReport" >CNNS THEMATIC REPORT</a></div></li>
+								<li><a href="articles" >CNNS ARTICLES</a></li>
+								<li><div><a href="stateAndDistrict">STATE AND DISTRICT NUTRITION FACTSHEETS</a></div></li>
+							</ul>
+						</div>
+					</div>
+				</div> -->
+				<div class="column right">
+					{% block content %}
+					<div id="page" class="container">
+						<div id="main">
+							<div id="featured">
+								<div class="title">
+									<h2>CNNS Report</h2>
+									<span class="byline">(Click on the Report to download it)</span>
+								</div>
+								<ul class="style1">
+									<li><a href="{%static 'report/CNNS-report_Version1.0.pdf' %}" target="_blank">Report</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					{% endblock %}
+				</div>
+			</div>	
+		</div>  
+    </body>
+</html>

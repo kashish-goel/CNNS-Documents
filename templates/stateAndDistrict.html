@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+			<title></title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+    <script src="{%static 'javascript/function.js' %}" > </script>
+	</head>
+    <body>
+        <div id="page" class="container">
+	        <div id="main">
+		        <div id="featured">
+			        <div class="title">
+                  <h2>State And District Nutrition Factsheets </h2>
+                  <span class="byline">(To download District factsheet, select State, press VIEW and click District)</span>
+              </div>
+              <form action="stateAndDistrict" method="post">
+                {% csrf_token %}
+                <select name="selected_state" id="state" style="width: 200px;">
+                  <option disabled="true" > --select country/state--</option>
+                  <option value="India" > India</option>
+                  {% for s in states %}
+                  <option value="{{s.area_name}}"> {{s.area_name}}</option>
+                  {% endfor %}
+                </select>
+                <input type="submit"  value="View" >
+              </form>  
+              {% if selected_state_value == "India"%}
+                <ul class="style1 stateAndDistrict" > 
+                  {% for i in india %}
+                    <li>
+                      <a href="{{i.area_code}}" target="_blank">{{ i.area_name}}</a> 
+                    </li>
+                  {% endfor %}
+                  {% for s in states %}
+                    <li>
+                      <a href="{{s.area_code}}" target="_blank">{{ s.area_name}}</a>
+                    </li>
+                  {% endfor %}  
+                </ul>
+              {% else %}
+                <ul class="style1 stateAndDistrict" > 
+                  {% for d in district %}
+                    <li>
+                      <a href="{{d.area_code}}" target="_blank">{{ d.area_name}}</a> 
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif%}  
+		        </div>
+	        </div>
+        </div>
+    </body>
+</html>
+{% endblock %}
