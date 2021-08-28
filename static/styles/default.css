@@ -1,24 +1,27 @@
 .Topheader{
 	top: 0%;
 	background-color: green;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 /* fixed box shodow */
 .column{
     float: left;
-    padding: 50px;	
+    padding: 20px;	
 }
 
 .right{
 	
 	padding: 0px 10px;
-	margin-top: 10px;
-  	margin-left: -320px;
-	left:50%;
-	position: fixed;
-    width: 630px;
-    height: 520px;
-	box-shadow: 0 3px 12px 0 #2980b9;
+	/* margin-top: 25px;
+  	margin-left: 20%; */
+	/* left:25%; */
+	position: relative;
+    /* width: 70%; */
+    height: auto;
+	/* margin-right: 2%; */
+	/* box-shadow: 0 3px 12px 0 #2980b9; */
+	border: 1px solid green;
+	/* border-radius: 25px; */
 	overflow: auto;
    
 }
@@ -26,7 +29,7 @@
 /* side navigation bar*/
 
 #menu li {
-	background-color:orange;
+	background-color: #ffa246;
 }
 #menu li
 {
@@ -62,13 +65,15 @@
 #menu li a, #menu li span
 {
 	display: block;
-	padding: .3em 1.5em;
-	text-align: center;
+	padding: 1em 1.5em;
+	text-align: left;
+	font-size: 13px;
 	text-decoration:  none;
 	text-transform: uppercase;
-	font-weight: 700;
+	/* font-weight: 700; */
 	color: white;
-	text-shadow: 2px 2px 4px #888888;
+	width: 50%;
+	/* text-shadow: 2px 2px 4px #888888; */
 }
 
 #menu li:hover{
@@ -80,8 +85,9 @@
 .title h2
 {
 	font-size: 1.7em;
-	color:  #2980b9;
-	text-shadow: 2px 2px 4px #888888
+	color:  rgba(255, 162, 70, 1);
+	font-weight: 700;
+	/* text-shadow: 2px 2px 4px #888888 */
 }
 
 .title .byline
@@ -91,7 +97,7 @@
 }
 .title
 {
-    text-align: center;
+    text-align: left;
 	margin-bottom: 1em;
 }
 
@@ -102,17 +108,19 @@ ul.style1
 	margin: 0 auto;
 	padding: 0;
 	width: 100%;
-	overflow: hidden;
+	overflow: auto;
 	list-style: none;
-	text-align: center;
+	text-align: left;
 	color: #6c6c6c
 }
-
+#featured{
+	margin-left: 2%;
+}
 ul.style1 li
 {
 	padding: .5em 0em 0em 0em;
 	margin: 0 0 1.5em 0;
-	border-top: 1px solid rgba(0,0,0,.1);
+	/* border-top: 1px solid rgba(0,0,0,.1); */
 }
 
 ul.style1 p
@@ -142,7 +150,9 @@ ul.factsheet li
 	margin: 0 0 .2em 0;
 
 }
-
+select {
+	display: none;
+  }
 /* presentation */
 
 ul.presentation li
@@ -176,15 +186,16 @@ ul.stateAndDistrict li
 
 
 .sidebar {
-	margin: 0;
+	margin: 25px 50px 75px 25px !important;
 	padding: 0;
 	width: 300px;
-	position: fixed;
+	position: absolute;
 	height: 100%;
 	
 	overflow: auto;
 }
 #mySidenav ul {
+	margin-left: 20%;
 	list-style:none;
 }
   
@@ -231,12 +242,22 @@ div.content {
 		position: relative;
 	}
 }
+.footer {
+	height: 5rem;
+	width:auto;
+	position: absolute;
+	background-color: black;
+	text-align: center;
+	margin-top: 1rem;
+}
 #mySidenav li
 {
 	background-color: orange;
-	border-radius: 30px;
+	/* border-radius: 30px; */
 	padding: 8px;
-	margin-bottom: 5px;
+	width: 90%;
+	/* margin: 50px !important; */
+	/* margin-bottom: 5px; */
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 #mySidenav li:nth-child(even){
@@ -246,16 +267,16 @@ div.content {
 {
 	display: block;
 	padding: 0em .1em;
-	text-align: center;
+	text-align: left;
 	text-decoration:  none;
 	font-size: small;
 	text-transform: uppercase;
-	font-weight: 700;
+	/* font-weight: 700; */
 	color:white;
-	text-shadow: 2px 2px 4px #888888;
+	/* text-shadow: 2px 2px 4px #888888; */
 }
 
-#mySidenav {
-	margin-left: -20px;
-}
+/* #mySidenav {
+	margin-left: 10%;
+} */
 
