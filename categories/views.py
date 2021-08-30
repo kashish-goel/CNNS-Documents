@@ -10,6 +10,9 @@ def articles(request):
 def dataUsersWorkshop(request):
     return render(request,'dataUsersWorkshop.html')      
 
+def referenceDocuments(request):
+    return render(request,'referenceDocuments.html')       
+
 def factsheets(request):
     india=UtAreaEn.objects.values('area_id','area_name').filter(area_parent_nid=-1)
     states=UtAreaEn.objects.values('area_id','area_name').filter(area_parent_nid=1).filter(~Q(area_name="Andaman & Nicobar Islands")).filter(~Q(area_name="Chandigarh")).filter(~Q(area_name="Dadra and Nagar Haveli")).filter(~Q(area_name="Daman and Diu")).filter(~Q(area_name="Lakshadweep")).filter(~Q(area_name="Puducherry")).order_by('area_name')
