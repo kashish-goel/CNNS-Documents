@@ -24,12 +24,12 @@
                 <ul class="style1 stateAndDistrict" > 
                   {% for i in india %}
                     <li>
-                      <a href="{{i.area_code}}" target="_blank">{{ i.area_name}}</a> 
+                      <a href="{{i.area_id}}" target="_blank">{{ i.area_name}}</a> 
                     </li>
                   {% endfor %}
                   {% for s in states %}
                     <li>
-                      <a href="{{s.area_code}}" target="_blank">{{ s.area_name}}</a>
+                      <a href="{{s.area_id}}" target="_blank">{{ s.area_name}}</a>
                     </li>
                   {% endfor %}  
                 </ul>
@@ -37,7 +37,7 @@
                 <ul class="style1 stateAndDistrict" > 
                   {% for d in district %}
                     <li>
-                      <a href="{{d.area_code}}" target="_blank">{{ d.area_name}}</a> 
+                      <a href="{{d.area_id}}" target="_blank">{{ d.area_name}}</a> 
                     </li>
                   {% endfor %}
                 </ul>
