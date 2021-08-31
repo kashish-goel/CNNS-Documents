@@ -212,6 +212,14 @@ ul.stateAndDistrict li
 
 	box-shadow: 0 3px 10px 0 #2980b9;
 }
+
+#mobileButton{
+	display: none;
+}
+
+#sideMenu{
+	display: block;
+}
 div.content {
 	margin-left: 200px;
 	padding: 1px 16px;

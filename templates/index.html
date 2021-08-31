@@ -94,9 +94,13 @@ body{
 		</div> 
 	<div class="col-12">
 		<div class="row">
-	
+			
 			<div class="col-md-2 mt-5 sidenav" id="mySidenav">
-				<ul class="press">
+					<button type="button" class="btn btn-xs" id="mobileButton" style="margin: auto; background-color: #28a745; margin-bottom: 20px;" onclick="toggleNavBar()">
+						<i class="material-icons" style="color:white;">menu_open</i>
+					</button>
+				<!-- <button><i class="glyphicon glyphicon-align-justify"></button> -->
+				<ul class="press" id="sideMenu">
 					<li style="font-weight: bold;"><a href="">CATEGORIES</a></li>
 					<li><a>CNNS</a></li>
 					<li><a href="dataUsersWorkshop">CNNS DATA USERS WORKSHOP</a></li>
@@ -164,6 +168,16 @@ body{
 			</div>
 		</div> 
 	</footer>
+	<script>
+		const toggleNavBar = () => {
+		var x = document.getElementById("sideMenu");
+			if (x.style.display === "none") {
+				x.style.display = "block";
+			} else {
+				x.style.display = "none";
+			}
+		}
+	</script>
 </body>
 
 </html>
