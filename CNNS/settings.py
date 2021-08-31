@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'CNNS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME':'ni_db',
-        'USER':'nutritionIndia',
-        'PASSWORD':'nutritionIndia',
+        'USER':'postgres',
+        'PASSWORD':'postgres',
         'HOST':'localhost',
-        'PORT':'80'
+        'PORT':'5432'
     }
 }
 
