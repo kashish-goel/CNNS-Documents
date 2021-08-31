@@ -75,24 +75,25 @@ body{
 	<!-- <script src="{%static 'javascript/function.js' %}"></script> -->
 	<body>
 		
-<header>
-	<div  id="brand_container" class="grid grid-cols-3 p-1">
-		<div class="my-3"><a href="https://www.mohfw.gov.in/" target="_blank"><img src="{%static 'images/mhf.png' %}" class="health-ministry"/></a></div>
-	<div class="mt-4"><a href="/" target=""><img src="{% static 'images/nutrition-logo.svg' %}" class="nutrition-india mx-auto"/></a></div>
-	<div>	<a href="http://poshanabhiyaan.gov.in/#/" target="_blank"> <img src="{%static 'images/pa.png' %}" class="poshan-abhiyan"/></a></div> 
-</div>
 
-</header>
 	<section id='main_app_container' class='flex flex-col'>
 
-	
+		
+	<div class="col-12" id="content-wrap">
+		<header>
+			<div  id="brand_container" class="grid grid-cols-3 p-1">
+				<div class="my-3"><a href="https://www.mohfw.gov.in/" target="_blank"><img src="{%static 'images/mhf.png' %}" class="health-ministry"/></a></div>
+			<div class="mt-4"><a href="/" target=""><img src="{% static 'images/nutrition-logo.svg' %}" class="nutrition-india mx-auto"/></a></div>
+			<div>	<a href="http://poshanabhiyaan.gov.in/#/" target="_blank"> <img src="{%static 'images/pa.png' %}" class="poshan-abhiyan"/></a></div> 
+		</div>
+		
+		</header>
 		<!-- <img src="{%static 'images/pic1.jpg' %}"   width="160px" height="95px"/>
 		<img src="{%static 'images/pic2.jpg' %}" style="float: right;" width="160px" height="95px"/>
 		 -->
 		<div class="Topheader">
 			<i class="material-icons" style="font-size:35px;color:white;text-shadow:2px 2px 4px #000000;">home</i>
 		</div> 
-	<div class="col-12">
 		<div class="row">
 			
 			<div class="col-md-2 mt-5 sidenav" id="mySidenav">
@@ -153,21 +154,23 @@ body{
 				</div>
 			</div>	
 		</div>
+
+		<footer class="footer p-0 mt-4">
+			<div class="row  p-0 m-0 align-items-center">
+				<div class="col-4">
+					<a href="https://nutritionindia.info/" target="_blank"><img src="{% static 'images/nutrition-logo-footer.svg' %}" class="nutrition-image"/></a>
+				</div>
+				<div class="col-4">
+					<a href="https://www.ctara.iitb.ac.in/" target="_blank"><img src="{% static 'images/ctara-logo.png' %}" title="CTARA" class="iitb-image"/></a>
+				</div>
+			
+				<div class="col-4">
+					<a href="http://unicef.in/" target="_blank"><img src="{% static 'images/unicefLogo.png' %}"  class="unichef-image"/></a>
+				</div>
+			</div> 
+		</footer>
 	</section>
-	<footer class="footer p-0 mt-4">
-		<div class="row  p-0 m-0 align-items-center">
-			<div class="col-4">
-				<a href="https://nutritionindia.info/" target="_blank"><img src="{% static 'images/nutrition-logo-footer.svg' %}" class="nutrition-image"/></a>
-			</div>
-			<div class="col-4">
-				<a href="https://www.ctara.iitb.ac.in/" target="_blank"><img src="{% static 'images/ctara-logo.png' %}" title="CTARA" class="iitb-image"/></a>
-			</div>
-		
-			<div class="col-4">
-				<a href="http://unicef.in/" target="_blank"><img src="{% static 'images/unicefLogo.png' %}"  class="unichef-image"/></a>
-			</div>
-		</div> 
-	</footer>
+
 	<script>
 		const toggleNavBar = () => {
 		var x = document.getElementById("sideMenu");

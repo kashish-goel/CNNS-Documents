@@ -311,7 +311,7 @@
     .footer {
         height: 3rem;
         width:auto;
-        position: relative;
+        position: absolute;
         background-color: black;
         text-align: center;
         margin-top: 1rem;
