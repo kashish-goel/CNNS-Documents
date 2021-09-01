@@ -67,7 +67,7 @@ def presentations(request):
                     str+=s   
         else :
             str=individual_name[0]
-        states[i]['area_id'] = 'static/presentations/CNNS_Presentations_' + str + '.pdf'  
+        states[i]['area_id'] = '/static_files/presentations/CNNS_Presentations_' + str + '.pdf'  
     return render(request,'presentations.html',{'states':states})
 
 def report(request):
@@ -80,9 +80,9 @@ def stateAndDistrict (request):
     states=UtAreaEn.objects.values('area_id','area_name','area_nid').filter(area_parent_nid=1).order_by('area_name')
 
     for i in range(len(states)):
-        states[i]['area_id'] = 'static/stateAndDistrict/NutritionInfo_' + states[i]['area_id']+ '_' + states[i]['area_name'] + '.pdf'  
+        states[i]['area_id'] = '/static_files/stateAndDistrict/NutritionInfo_' + states[i]['area_id']+ '_' + states[i]['area_name'] + '.pdf'  
     for i in range(len(india)):    
-        india[i]['area_id']= 'static/stateAndDistrict/NutritionInfo_' + india[i]['area_id']+ '_' + india[i]['area_name'] + '.pdf'   
+        india[i]['area_id']= '/static_files/stateAndDistrict/NutritionInfo_' + india[i]['area_id']+ '_' + india[i]['area_name'] + '.pdf'   
 
     if request.method == 'POST':
        
