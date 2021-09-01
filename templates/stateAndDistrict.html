@@ -10,15 +10,18 @@
                   <span class="byline">(To download District factsheet, select State, press VIEW and click District)</span>
               </div>
               <form action="stateAndDistrict" method="post">
-                {% csrf_token %}
-                <select name="selected_state" id="state" style="width: 200px;">
-                  <option disabled="true" > --select country/state--</option>
-                  <option value="India" > India</option>
-                  {% for s in states %}
-                  <option value="{{s.area_name}}"> {{s.area_name}}</option>
-                  {% endfor %}
-                </select>
-                <input type="submit"  value="View" >
+                <div style="border: 1px solid black; border-radius: 10px; padding: 10px;">
+                  {% csrf_token %}
+                  <select name="selected_state" id="state" style="width: 250px; background-color: white; border: 1px solid black; border-radius: 5px; height: 40px;">
+                    <option disabled="true" > --select country/state--</option>
+                    <option value="India" > India</option>
+                    {% for s in states %}
+                    <option value="{{s.area_name}}"> {{s.area_name}}</option>
+                    {% endfor %}
+                  </select>
+                  <!-- <i class="fa fa-search"></i> -->
+                  <input type="submit"  value="View" style="width: 100px; background-color: rgba(255, 162, 70, 1); color: white;">
+                </div>
               </form>  
               {% if selected_state_value == "India"%}
                 <ul class="style1 stateAndDistrict" > 
