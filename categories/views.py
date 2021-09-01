@@ -96,7 +96,7 @@ def stateAndDistrict (request):
             id=areaId['area_nid']
             district=UtAreaEn.objects.values('area_id','area_name').filter(area_parent_nid=id).order_by('area_name')
             for i in range(len(district)):    
-                district[i]['area_id']= 'static/stateAndDistrict/NutritionInfo_' + district[i]['area_id']+ '_' + district[i]['area_name'] + '.pdf'  
+                district[i]['area_id']= '/static_files/stateAndDistrict/NutritionInfo_' + district[i]['area_id']+ '_' + district[i]['area_name'] + '.pdf'  
             return render(request,'stateAndDistrict.html',{'states':states,'india':india,'district':district,'selected_state_value':selected_state_value})  
         else :          
             return render(request,'stateAndDistrict.html',{'states':states,'india':india,'selected_state_value':selected_state_value})      
