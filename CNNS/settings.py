@@ -12,21 +12,23 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '0xdz=90!osscq*m5q$yne_9m&em1^h&=m+k9@k_20llr-@bka1'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [config('ALLOWED_HOST_1'),config('ALLOWED_HOST_2')]
 
 
 # Application definition
@@ -78,12 +80,12 @@ WSGI_APPLICATION = 'CNNS.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME':'ni_db',
-        'USER':'postgres',
-        'PASSWORD':'postgres',
-        'HOST':'localhost',
-        'PORT':'5432'
+        'ENGINE': config('ENGINE'),
+        'NAME':config('NAME'),
+        'USER':config('DB_USER'),
+        'PASSWORD':config('PASSWORD'),
+        'HOST':config('HOST'),
+        'PORT':config('PORT'),
     }
 }
 
@@ -125,10 +127,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = config('STATIC_URL')
 STATICFILES_DIRS =[
-    os.path.join(BASE_DIR,'static')
+    os.path.join(BASE_DIR,config('STATICFILES_DIRS'))
 ]
-STATIC_ROOT=os.path.join(BASE_DIR,'staticFiles')
+STATIC_ROOT=os.path.join(BASE_DIR,config('STATIC_ROOT'))
 MEDIA_URL='/pdf/'
 MEDIA_ROOT=os.path.join(BASE_DIR,'pdf')
