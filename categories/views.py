@@ -30,9 +30,9 @@ def factsheets(request):
                     flag=True
         else :
             str=individual_name[0]            
-        states[i]['area_id'] = 'static/factsheets/CNNS-v6-factsheet-' + str + '.pdf' 
+        states[i]['area_id'] = '/static_files/factsheets/CNNS-v6-factsheet-' + str + '.pdf' 
     for i in range(len(india)):    
-        india[i]['area_id']=  'static/factsheets/CNNS-v6-factsheet-' + india[i]['area_name'] + '.pdf'  
+        india[i]['area_id']=  '/static_files/factsheets/CNNS-v6-factsheet-' + india[i]['area_name'] + '.pdf'  
     return render(request,'factsheets.html',{'states':states,'india':india})   
 
 def index(request):
