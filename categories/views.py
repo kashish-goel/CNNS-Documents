@@ -30,9 +30,9 @@ def factsheets(request):
                     flag=True
         else :
             str=individual_name[0]            
-        states[i]['area_id'] = 'static/factsheets/CNNS-v6-factsheet-' + str + '.pdf' 
+        states[i]['area_id'] = '/static_files/factsheets/CNNS-v6-factsheet-' + str + '.pdf' 
     for i in range(len(india)):    
-        india[i]['area_id']=  'static/factsheets/CNNS-v6-factsheet-' + india[i]['area_name'] + '.pdf'  
+        india[i]['area_id']=  '/static_files/factsheets/CNNS-v6-factsheet-' + india[i]['area_name'] + '.pdf'  
     return render(request,'factsheets.html',{'states':states,'india':india})   
 
 def index(request):
@@ -67,7 +67,7 @@ def presentations(request):
                     str+=s   
         else :
             str=individual_name[0]
-        states[i]['area_id'] = 'static/presentations/CNNS_Presentations_' + str + '.pdf'  
+        states[i]['area_id'] = '/static_files/presentations/CNNS_Presentations_' + str + '.pdf'  
     return render(request,'presentations.html',{'states':states})
 
 def report(request):
@@ -80,9 +80,9 @@ def stateAndDistrict (request):
     states=UtAreaEn.objects.values('area_id','area_name','area_nid').filter(area_parent_nid=1).order_by('area_name')
 
     for i in range(len(states)):
-        states[i]['area_id'] = 'static/stateAndDistrict/NutritionInfo_' + states[i]['area_id']+ '_' + states[i]['area_name'] + '.pdf'  
+        states[i]['area_id'] = '/static_files/stateAndDistrict/NutritionInfo_' + states[i]['area_id']+ '_' + states[i]['area_name'] + '.pdf'  
     for i in range(len(india)):    
-        india[i]['area_id']= 'static/stateAndDistrict/NutritionInfo_' + india[i]['area_id']+ '_' + india[i]['area_name'] + '.pdf'   
+        india[i]['area_id']= '/static_files/stateAndDistrict/NutritionInfo_' + india[i]['area_id']+ '_' + india[i]['area_name'] + '.pdf'   
 
     if request.method == 'POST':
        
@@ -96,7 +96,7 @@ def stateAndDistrict (request):
             id=areaId['area_nid']
             district=UtAreaEn.objects.values('area_id','area_name').filter(area_parent_nid=id).order_by('area_name')
             for i in range(len(district)):    
-                district[i]['area_id']= 'static/stateAndDistrict/NutritionInfo_' + district[i]['area_id']+ '_' + district[i]['area_name'] + '.pdf'  
+                district[i]['area_id']= '/static_files/stateAndDistrict/NutritionInfo_' + district[i]['area_id']+ '_' + district[i]['area_name'] + '.pdf'  
             return render(request,'stateAndDistrict.html',{'states':states,'india':india,'district':district,'selected_state_value':selected_state_value})  
         else :          
             return render(request,'stateAndDistrict.html',{'states':states,'india':india,'selected_state_value':selected_state_value})      

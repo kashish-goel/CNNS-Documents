@@ -92,7 +92,7 @@ body{
 		<img src="{%static 'images/pic2.jpg' %}" style="float: right;" width="160px" height="95px"/>
 		 -->
 		<div class="Topheader">
-			<i class="material-icons" style="font-size:35px;color:white;text-shadow:2px 2px 4px #000000;">home</i>
+			<a href="/"><i class="material-icons" style="font-size:35px;color:white;text-shadow:2px 2px 4px #000000;">home</i></a>
 		</div> 
 		<div class="row">
 			
@@ -103,7 +103,7 @@ body{
 				<!-- <button><i class="glyphicon glyphicon-align-justify"></button> -->
 				<ul class="press" id="sideMenu">
 					<li style="font-weight: bold;"><a href="">CATEGORIES</a></li>
-					<li><a>CNNS</a></li>
+					<li style="background-color: rgb(69,69,69);" ><a>CNNS</a></li>
 					<li><a href="dataUsersWorkshop">CNNS DATA USERS WORKSHOP</a></li>
 					<li><a href="{% url 'report' %}">CNNS REPORT</a></li>
 					<li><a href="{% url 'keyFindings' %}">CNNS KEY FINDINGS</a></li>
@@ -112,7 +112,7 @@ body{
 					<li><a href="{% url 'thematicReport' %}">CNNS THEMATIC REPORT</a></li>
 					<li><a href="{% url 'articles' %}">CNNS ARTICLES</a></li>
 					<li><a href="{% url 'stateAndDistrict' %}">STATE AND DISTRICT NUTRITION FACTSHEETS</a></li>
-					<li><a>NutritionINDIA.info</a></li>
+					<li style="background-color: rgb(69,69,69);"><a>NutritionINDIA.info</a></li>
 					<li><a href="{% url 'referenceDocuments' %}">REFERENCE DOCUMENTS</a></li>
 				</ul>	
 				<!-- <div class="column left">
