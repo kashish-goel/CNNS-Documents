@@ -13,6 +13,7 @@ urlpatterns=[
     path('stateAndDistrict',views.stateAndDistrict,name='stateAndDistrict'),
     path('thematicReport',views.thematicReport,name='thematicReport'),
     path('referenceDocuments',views.referenceDocuments,name='referenceDocuments'),
+    path('questionnaire',views.questionnaire,name='questionnaire'),
    
 ]
  
