@@ -178,7 +178,7 @@ ul.stateAndDistrict li
 }
 
 #content-wrap {
-	padding-bottom: 5rem;    /* Footer height */
+	padding-bottom: 10rem;    /* Footer height */
   }
 
 
@@ -248,14 +248,14 @@ div.content {
 	}
 }
 .footer {
-	height: 5rem;
+	/* height: 5rem; */
 	width:auto;
 	position: absolute;
 	bottom: 0;
 	background-color: black;
 	text-align: center;
 	margin-top: 1rem;
-	height: 2.5rem;            /* Footer height */
+	height: 4rem;            /* Footer height */
 
 }
 #mySidenav li
@@ -278,7 +278,7 @@ div.content {
 	text-align: left;
 	text-decoration:  none;
 	font-size: small;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	/* font-weight: 700; */
 	color:white;
 	/* text-shadow: 2px 2px 4px #888888; */
